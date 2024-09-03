@@ -77,4 +77,4 @@ server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
 
-// get the output on http://localhost:3000/getTimeStories
+// Get the output on http://localhost:3000/getTimeStories
