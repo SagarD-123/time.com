@@ -1,3 +1,4 @@
+// Built-in libraries
 const http = require('http');
 const https = require('https');
 
@@ -26,7 +27,7 @@ const server = http.createServer((req, res) => {
     res.end('404 Not Found');
   }
 });
-
+// extracting the storeis content from html page
 function extractStories(html) {
   const stories = [];
   const storyRegex = /<li class="latest-stories__item">\s*<a href="([^"]+)">\s*<h3 class="latest-stories__item-headline">([^<]+)<\/h3>/g;
@@ -46,3 +47,5 @@ const PORT = 3000;
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
+// get the output on http://localhost:3000/getTimeStories
